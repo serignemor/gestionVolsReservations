@@ -1,0 +1,13 @@
+Django
+Unipath
+asgiref
+autopep8
+dj-database-url
+pycodestyle
+python-decouple
+pytz
+setuptools
+sqlparse
+toml
+wheel
+whitenoise

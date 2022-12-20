@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="db_gestion_vols_reservation" uuid="3099287e-df77-4113-8df3-edcde605e17f">
+    <data-source source="LOCAL" name="sqlite_db" uuid="a3f64f4a-db65-419e-81fd-ff262852b446">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:D:\Projects\python\gestion_vols_reservations_material\db.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:sqlite:D:\Projects\python\gestionVolsReservations\db.sqlite3</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
       <libraries>
         <library>
