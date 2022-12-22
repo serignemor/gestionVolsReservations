@@ -1,0 +1,70 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+{% block title %} Compagnies {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header card-header-info">
+                    <h4 class="card-title ">Liste des compagnies</h4>
+                    <p class="card-category"> L'ensemble des compagnies enregistrées</p>
+                    <a href="{% url 'compagnie_create' %}">
+                        <button class="btn btn-outline-default pull-right">Ajouter une compagnie</button>
+                    </a>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead class=" text-primary">
+                            <th>
+                                ID
+                            </th>
+                            <th>
+                                Logo
+                            </th>
+                            <th>
+                                Nom
+                            </th>
+                            <th>
+                                Actions
+                            </th>
+                            </thead>
+                            <tbody>
+                            {% for compagnie in compagnies %}
+                            <tr>
+                                <td>{{ compagnie.id }}</td>
+                                <td><img src="{{ compagnie.logo.url }}"
+                                         alt="Logo de compagnie {{ compagnie.nom }}" height="100px"></td>
+                                <td>{{ compagnie.nom }}</td>
+                                <td>
+                                    <a href="{% url 'compagnie_edit' pk=compagnie.pk %}">
+                                        <button class="btn btn-outline-info pull-right">
+                                            Modifier
+                                        </button>
+                                    </a>
+                                    <a href="{% url 'compagnie_delete' pk=compagnie.id %}">
+                                        <button class="btn btn-outline-danger pull-right">
+                                            Supprimer
+                                        </button>
+                                    </a>
+                                </td>
+                            </tr>
+                            {% endfor %}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
